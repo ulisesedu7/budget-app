@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Budget Tracker App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <% if user_signed_in? %>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to "Categories", categories_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Payments", payments_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Account", edit_user_registration_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link sign-out-btn" %>
+          </li>
+          <li class="nav-item">
+            <p class="nav-item">Current user: <%= current_user.name %></p>
+          </li>
+        </ul>
+      </div>
+    <% else %>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link disabled sign-out-btn" %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</nav>
