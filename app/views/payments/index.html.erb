@@ -2,13 +2,17 @@
 
 <h1>Payments</h1>
 
-<div id="payments">
-  <% @payments.each do |payment| %>
-    <%= render payment %>
-    <p>
-      <%= link_to "Show this payment", payment %>
-    </p>
-  <% end %>
-</div>
+<% if @payments.empty? %>
+  <h2>Currently, you have not created any categories <%= @current_user.name %></h2>
+<% else %>
+  <div id="payments">
+    <% @payments.each do |payment| %>
+      <%= render payment %>
+      <p>
+        <%= link_to "Show this payment", payment %>
+      </p>
+    <% end %>
+  </div>
+<% end %>
 
 <%= link_to "New payment", new_payment_path %>

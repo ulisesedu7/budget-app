@@ -1,6 +1,11 @@
-#categories > a {
+#categories > a,
+#category a {
   text-decoration: none;
   color: #434b54;
+}
+
+.fa-arrow-left {
+  margin-right: 1.4rem;
 }
 
 .category {

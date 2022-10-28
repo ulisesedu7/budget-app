@@ -10,6 +10,8 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
+    @current_user = current_user
+    @payments = @category.payments
   end
 
   # GET /categories/new

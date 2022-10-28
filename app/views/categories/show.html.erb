@@ -1,10 +1,31 @@
-<p style="color: green"><%= notice %></p>
+<section id="category">
+  <div class="d-flex align-items-center">
+    <%= link_to categories_path do %>
+      <i class="fa-solid fa-arrow-left fa-3x"></i>
+      <% end %>
+      <h1>Payments</h1>
+  </div>
+  <div>  
+    <p style="color: green"><%= notice %></p>
 
-<%= render @category %>
+    <%= render @category %>
 
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+    <% if @payments.empty? %>
+      <h2>Currently, you have not added any payments to this category <%= @current_user.name %></h2>
+    <% else %>
+      <div id="payments">
+        <% @payments.each do |payment| %>
+          <%= render payment %>
+          <p>
+            <%= link_to "Show this payment", payment %>
+          </p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
+<div class="d-grid gap-2">
+  <%= link_to "New payment", new_payment_path(@category), class: "btn btn-success btn-lg" %>
 </div>
+

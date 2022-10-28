@@ -4,7 +4,9 @@ class PaymentsController < ApplicationController
 
   # GET /payments or /payments.json
   def index
-    @payments = Payment.all
+    @user = current_user
+    @category = @user.categories
+    @payments = @category.payments
   end
 
   # GET /payments/1 or /payments/1.json
@@ -14,15 +16,25 @@ class PaymentsController < ApplicationController
   # GET /payments/new
   def new
     @payment = Payment.new
+    @category = Category.find(params[:category_id])
   end
 
   # GET /payments/1/edit
   def edit
+    @category = Category.find(params[:category_id])
+    @payment = Payment.find(params[:id])
   end
 
   # POST /payments or /payments.json
   def create
+    @current_user = current_user
+    @category = Category.find(params[:category_id])
     @payment = Payment.new(payment_params)
+
+    @payment.author = @current_user
+    params[:payments][:categories].each do |id|
+      @payment.categories.push(Category.find(id)) if id != ''
+    end
 
     respond_to do |format|
       if @payment.save
