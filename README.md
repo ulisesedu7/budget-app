@@ -14,9 +14,9 @@
 
 ## Live Demo
 
-- Check the live demo of my page [here]()
+- Check the live demo of my page [here](https://agile-woodland-68434.herokuapp.com/)
 
-- Also, you can watch a video demo of the app [here]()
+- Also, you can watch a video demo of the app [here](https://www.loom.com/share/329517441bf6463da1981b917892aa86)
 
 ## Setup
 
