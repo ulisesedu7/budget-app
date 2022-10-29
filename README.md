@@ -54,6 +54,7 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 - Microverse
 - My supportive family 😊
+- [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) is the author of the original design
 
 ## 📝 License
 
