@@ -1,0 +1,41 @@
+#categories > a,
+#category a {
+  text-decoration: none;
+  color: #434b54;
+}
+
+.fa-arrow-left {
+  margin-right: 1.4rem;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px 0 #000;
+  box-shadow: 0 0 5px 0 #6e6e6e;
+  width: 100%;
+}
+
+.category-content {
+  display: flex;
+  align-items: center;
+}
+
+.category-content h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.category-icon {
+  margin: 1rem;
+  width: 25%;
+  height: 25%;
+}
+
+.category-total {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0 2rem;
+}

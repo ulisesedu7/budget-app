@@ -1,0 +1,10 @@
+<h1>Editing payment</h1>
+
+<%= render "form", payment: @payment %>
+
+<br>
+
+<div>
+  <%= link_to "Back to categories", categories_path %>
+  <%= button_to "Destroy this payment", @payment, method: :delete %>
+</div>

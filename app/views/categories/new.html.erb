@@ -1,0 +1,11 @@
+<section>
+  <div class="d-flex align-items-center">
+    <%= link_to categories_path do %>
+      <i class="fa-solid fa-arrow-left fa-3x"></i>
+    <% end %>
+    <h1>Add a new category</h1>
+  </div>
+
+  <%= render "form", category: @category %>
+
+</section>

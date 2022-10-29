@@ -1,0 +1,16 @@
+<article id="<%= dom_id payment %>" class="payment-container">
+  <div>
+    <h3>
+      <%= payment.name %>
+    </h3>
+
+    <p>
+      <%= payment.created_at.to_time.strftime('%B %e') %>
+    </p>
+  </div>
+
+  <p>
+    $<%= payment.amount %>
+  </p>
+
+</article>

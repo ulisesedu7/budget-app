@@ -1,0 +1,15 @@
+<%= link_to category do %>
+  <article id="<%= dom_id category %>" class="category">
+    <div class="category-content">
+      <%= image_tag "#{category.icon}", class: "category-icon"%>
+
+      <h3>
+        <%= category.name %>
+      </h3>
+    </div>
+
+    <p class="category-total">
+      $<%= category.total_amount %>
+    <p>
+  </article>
+<% end %>
