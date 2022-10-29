@@ -17,7 +17,7 @@
         <% @payments.each do |payment| %>
           <%= render payment %>
           <p>
-            <%= link_to "Show this payment", payment %>
+            <%= link_to "Edit this payment", edit_payment_path(payment), class: "payment-edit-links" %>
           </p>
         <% end %>
       </div>

@@ -1,13 +1,15 @@
-<h1>New payment</h1>
+<section>
+  <div class="d-flex align-items-center">
+    <%= link_to categories_path do %>
+      <i class="fa-solid fa-arrow-left fa-3x"></i>
+    <% end %>
+    <h1>Add a new payment</h1>
+  </div>
 
-<%= render "form", payment: @payment %>
+  <%= render "form", payment: @payment %>
 
-<br>
+</section>
 
-<%
-=begin%>
- <div>
-  <%= link_to "Back to Category", category_path %>
-</div> 
-<%
-=end%>
+
+
+
